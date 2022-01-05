@@ -1,0 +1,100 @@
+// Jagadish Dasa
+
+import java.util.Scanner;
+// Imports the scanner which allows us to get user input in the program
+
+public class MerryChristmasProgram {
+// Creates a class called MerryChristmasProgram
+// You need a class to run a Java program
+	
+	static String name;
+// Creates a string variable called name which stores text
+	static int repeat;
+// Creates a variable that stores an integer
+// This variable will determine whether the program is run again later on
+// Initialized variables that will have the value set later on in the program
+// Static means that the variable can be accessed in this whole file only and it stays in memory until the program ends
+	
+	public static void main(String args[]) {
+// Main method which is needed because if your program is not written or called in the main method it won't run
+
+		
+		Scanner scan = new Scanner(System.in);
+// Creating a scanner variable which is used to get user input
+		
+		System.out.println("This program will sing you a personalized Christmas carol! ");
+		
+		do {
+// Do while loop where in between in the do curly brackets, it does the program once before checking the condition
+			
+		System.out.print("What is your first name? \n");
+		name = scan.next();
+// Takes user input and stores it as a string in the name variable
+		
+		verseOne();
+		refrain();
+		verseTwo();
+		refrain();
+		verseThree();
+		refrain();
+		verseOne();
+		refrain();
+// Calls methods outside the main method in order of how the song goes
+		
+		try {
+// Try catch statement; inside of the try curly brackets it tries the code and if there are any errors then it moves on to the catch statement 
+			
+		System.out.println("Would you like to have the carol sung again to you? (Enter 1 for yes or anything else for no) ");
+		
+		if(scan.hasNextInt()) {
+// Checks to see if the user input is an integer
+			repeat=scan.nextInt();
+// Sets repeat equal to the integer that the user has entered
+		} else {
+			repeat = 2;
+// Sets repeat equal to 2 which makes it exit the loop and not run the program again
+		}
+		
+		}catch(Exception e) {
+// Catch will catch any errors in the try code and will do what's in the curly brackets if there are any errors
+			
+			System.out.println();
+		
+		}
+		
+		} while(repeat==1);	
+// Condition to check if the program above will run again
+		
+		scan.close();
+// Closes the scanner so that it can no longer be used
+		
+	}
+	
+	public static void verseOne() {
+// Creates a method called verseOne which will print out the first verse of the song
+		for(int i = 0; i < 3; i++) {
+// For loop that will run the code inside it three times
+// In this case it will print out three lines of the song
+			System.out.println("We wish " + name + " a merry Christmas");
+		}
+	}
+	
+	public static void refrain() {
+		System.out.println("Glad tidings we bring\nTo you and your kin;\nGlad tidings for Christmas\nAnd a happy New Year!");
+	}
+	
+	public static void verseTwo() {
+		for(int i = 0; i < 3; i++) {
+			System.out.println("We want some figgy pudding");
+		}
+		System.out.println("Please bring it right here!");
+	}
+	
+	public static void verseThree() {
+		for (int i = 0; i < 3; i++) {
+			System.out.println("We won't go until we get some");
+		}
+		System.out.println("So bring it out here!");
+	}
+	
+}

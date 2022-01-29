@@ -1,0 +1,15 @@
+Shawshank_Redemption 1994 Drama
+The_Godfather 1972 Crime
+The_Dark_Knight 2008 Action
+Angry_Men 1957 Crime
+Schindler's_List 1993 Biography
+Pulp_Fiction 1994 Crime
+Fight_Club 1999 Drama
+Inception 2010 Action
+The_Matrix 1999 Action
+Interstellar 2014 Adventure
+The_Ring 2002 Horror
+Halloween 1978 Horror
+Parasite 2019 Comedy
+Spirited_Away 2001 Animation
+Terminator 1984 Action
